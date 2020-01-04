@@ -14,13 +14,23 @@
                             <div class="row mb-2">
                                 <div class="col-6 col-lg-6">
                                   <div class="input-group input-group-lg mb-3 mb-lg-0">
-                                      <input class="form-control" style="font-size:18px;" placeholder="Pickup Location" type="text" required="">
+                                      <!--<input class="form-control" style="font-size:18px;" placeholder="Pickup Location" type="text"  id="tags" required="">-->
+                                    <select class="form-control" style="font-size: 15px;">
+                                        <option value="" selected disabled>Pickup Location</option>
+                                        <option>Any</option>
+                                        <option>Changi Airport</option>
+                                    </select>
                                     </div>
                                 </div>
 
                               <div class="col-6 col-lg-6">
                                 <div class="input-group input-group-lg mb-3 mb-lg-0">
-                                    <input class="form-control" style="font-size:18px;" placeholder="Dropoff Location" type="text" required="">
+                                    <!--<input class="form-control" style="font-size:18px;" placeholder="Dropoff Location" type="text" required="">-->
+                                    <select class="form-control" style="font-size: 15px;">
+                                        <option value="" selected disabled>Dropoff Location</option>
+                                        <option>Any</option>
+                                        <option>Changi Airport</option>
+                                    </select>
                                   </div>
                               </div>
 
@@ -42,7 +52,7 @@
                                       <div class="input-group-prepend">
                                         <div class="input-group-text"><i class="material-icons">schedule</i></div>
                                       </div>
-                                      <input type="text" style="font-size:15px;" class="form-control" id="inlineFormInputGroupUsername" placeholder="Pickup Time">
+                                      <input type="text" style="font-size:15px;" class="form-control" id="timepickerpickup" placeholder="Pickup Time">
                                     </div>
                                 </div>
 
@@ -61,7 +71,7 @@
                                       <div class="input-group-prepend">
                                         <div class="input-group-text"><i class="material-icons">schedule</i></div>
                                       </div>
-                                      <input type="text" style="font-size:15px;" class="form-control" id="inlineFormInputGroupUsername" placeholder="Dropoff Time">
+                                      <input type="text" style="font-size:15px;" class="form-control" id="timepickerdropoff" placeholder="Dropoff Time">
                                     </div>
                                 </div>
 
@@ -132,7 +142,7 @@
                                   <br/>
 
 
-                                <h6 class="card-title">Hourly Price</h6>
+                                <h6 class="card-title">Price</h6>
                                 <div class="checkbox">
                                     <label><input type="checkbox" value="">Below 50</label>
                                 </div>
@@ -175,22 +185,32 @@
                         <div class="col-sm-12 col-md-6 col-lg-6 mt-1">
                           <h3>Nissan</h3>
                           <div class="d-flex flex-row">
-                            <div class="bd-highlight mr-1"><i class="fas fa-car fa-lg"></i></div>
-                            <p class="mr-3">Medium car</p>
+                            <div class="bd-highlight mr-1" data-toggle="tooltip" data-placement="left" title="Car Type"><i class="fas fa-car fa-lg"></i></div>
+                            <p class="">Medium car</p>
 
-                            <div class="bd-highlight ml-3 mr-1" data-toggle="tooltip" data-placement="top" title="Tooltip on top"><i class="fas fa-cog"></i></div>
+                            <div class="bd-highlight ml-3 mr-1" data-toggle="tooltip" data-placement="left" title="Transmission"><i class="fas fa-cog"></i></div>
                             <p>Automatic</p>
 
-                            <div class="bd-highlight ml-3 mr-1"><i class="fas fa-user-alt"></i></div>
+                            <div class="bd-highlight ml-3 mr-1" data-toggle="tooltip" data-placement="left" title="No of people"><i class="fas fa-user-alt"></i></div>
                             <p>4</p>
 
                             <!-- <div class="bd-highlight ml-1">Flex item 3</div> -->
                           </div>
-                          <!-- <p>Pickup Drop off</p> -->
+
+                         <div class="d-flex flex-row">
+                             <div class="bd-highlight mr-1"><i class="fas fa-map-marker-alt mr-2"></i>Pickup:</div>
+                             <p> Changi airport</p>
+                         </div>
+
+                         <div class="d-flex flex-row">
+                             <div class="bd-highlight mr-1"><i class="fas fa-map-marker-alt mr-2"></i>Dropoff:</div>
+                             <p class="mr-3"> Changi airport</p>
+                         </div>
+
+
                         </div>
                         <div class="col-sm-12 col-md-3 col-lg-3">
-                          <h4 class="mt-2 text-center"><strong>$45<h6>/per hour</h6></strong></h4>
-                          <!-- <h5 class="mt-2 float-right"><strong>$150<h6>/per day</h6></strong></h5> -->
+                          <h4 class="mt-4 text-center"><strong>$145.50<h6>w/GST</h6></strong></h4>
                           <button class="btn btn-warning w-100 mt-4"type="button" name="button">Reserve</button>
                         </div>
                       </div>
