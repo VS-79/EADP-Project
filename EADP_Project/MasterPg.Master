@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/ionicons.min.css">
 
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 
 
     <link rel="stylesheet" href="css/flaticon.css">
@@ -34,6 +34,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!--google materials-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -64,11 +65,11 @@
              </div>
          </div>
        </nav>
-
-      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-
-      </asp:ContentPlaceHolder>
-   
+     <form runat="server">
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+          </asp:ContentPlaceHolder>
+     </form>
+ 
          <!-- loader -->
     <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
 
@@ -85,7 +86,8 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/jquery.timepicker.min.js"></script>
+    <!--<script src="js/jquery.timepicker.min.js"></script>-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
     <script src="js/scrollax.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
     <script src="js/google-map.js"></script>
@@ -94,17 +96,20 @@
     <script>
         var today = new Date();
         var currentDate = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+
         $('#datepickerPickup').datepicker({
             uiLibrary: 'bootstrap4',
             format: "dd/mm/yyyy",
             autoclose: true,
             startDate: currentDate
         });
+
         $("#datepickerPickup").datepicker().on("changeDate", function (e) {
             //alert($("#datepickerPickup").val());
             $('#datepickerDropoff').datepicker('setDate', $("#datepickerPickup").val());
             $('#datepickerDropoff').datepicker('setStartDate', $("#datepickerPickup").val());
-
+            $("#hfPickupDate").val($("#datepickerPickup").val());
+            $("#hfDropoffDate").val($("#datepickerPickup").val());
         });
 
    
@@ -112,6 +117,72 @@
             uiLibrary: 'bootstrap4',
             format: "dd/mm/yyyy",
             autoclose: true
+        });
+
+        $("#datepickerDropoff").datepicker().on("changeDate", function (e) {
+            $("#hfDropoffDate").val($("#datepickerDropoff").val());
+        });
+
+        $('input.timepicker').timepicker({});
+
+        $('#timepickerpickup').timepicker({
+            timeFormat: 'hh:mm p',
+            interval: 60,
+            minTime: '12:00 am',
+            maxTime: '11:00 pm',
+            startTime: '12:00 am',
+            dropdown: true,
+            scrollbar: true,
+            change: function (time) {
+                //alert(this.val());
+                var newDateTime = $(this).val();
+                /*if (newDateTime == '12:00 AM')
+                    alert("Hello");*/
+                $('#timepickerdropoff').prop("disabled", false)
+                $('#timepickerdropoff').val(newDateTime);
+                $('#timepickerdropoff').timepicker('option', 'minTime', newDateTime);
+                $('#hfTimePickup').val(newDateTime);
+            }
+        });
+
+
+
+        $('#timepickerdropoff').timepicker({
+            timeFormat: 'hh:mm p',
+            interval: 60,
+            minTime: '12:00 am',
+            maxTime: '11:00 pm',
+            startTime: '12:00 am',
+            dropdown: true,
+            scrollbar: true,
+            change: function (time) {
+                var newDateTime = $(this).val();
+                $('#hfTimeDropoff').val(newDateTime);
+
+            }
+        });
+
+        // Tooltips Initialization
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+
+        $(function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
         });
 
 
