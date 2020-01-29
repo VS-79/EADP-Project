@@ -1,0 +1,47 @@
+.dtextarea{
+  resize:none;
+  width:100%;
+  height:12em;
+}
+#age1,#age2{
+  width:13%;
+  display: inline-block;
+  text-align: center;
+}
+#time1,#time2{
+  width:25%;
+  display: inline-block;
+  text-align: center;
+}
+#date{
+  width:35%;
+  display: inline-block;
+  text-align: center;
+}
+.notification {
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+.weatherimg{
+  width:3em;
+  height:3em;
+  display: inline-block;
+}
+.notification:hover {
+  background: red;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}

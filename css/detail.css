@@ -1,0 +1,230 @@
+html,body,#content {
+  min-height: 100%;
+}
+
+.centered {
+  position: absolute;
+  bottom:1px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:black;
+  font-size:40px;
+  font-weight:bold;
+  background-color:rgba(255, 255, 255, 0.2);
+  width:50.5%;
+}
+#age{
+  width: 2.8em;
+}
+span{
+  padding-left: 15px;
+}
+.hid{
+  display: none;
+}
+#containerdetail{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+.container1 {
+  position: relative;
+  margin:auto;
+  text-align: center;
+  color: white;
+  width: 1050px;
+  border:6px solid black;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.container1 img{
+  height: 250px;
+}
+#field{
+  position: relative;
+  width:100%;
+  padding-left:0px;
+}
+.navbar {
+      margin-bottom: 10px;
+}
+.container2{
+  padding-top: 30px;
+  padding-left: 10%;
+  padding-bottom: 10%;
+}
+.box1{
+  position: relative;
+  float:left;
+  display:inline-block;
+  width:60%;
+  height:500px;
+}
+.box1 p{
+  color:black;
+  font-size:25px;
+}
+.box1 img{
+  width:100px;
+}
+.box3{
+  padding-top: 30px;
+  padding-left: 10%;
+  padding-bottom: 10%;
+
+}
+.rowd{
+  height: 400px;
+}
+.comments{
+  height: 5em;
+}
+.commentimg{
+  float: left;
+  position: relative;
+  display:inline-block;
+  position: relative;
+  margin-right: 5%;
+  height: 40px;
+  width: 20%;
+}
+.commentcontent{
+  float: left;
+  position: relative;
+  display:inline-block;
+  width: 69%;
+  bottom: -5px;
+}
+hr{
+  display:block;
+}
+.commentdate{
+  font-size:0.9em;
+  color:gray;
+}
+.comments{
+  width: 70%;
+  height: 9em;
+}
+#addcomment{
+  display: block;
+}
+#addcommentbtn{
+  float: right;
+  margin-right: 10%;
+}
+.box2{
+  display:inline-block;
+  position: relative;
+  width:39%;
+  height:500px;
+
+}
+.box2 p {
+  font-size: 32px;
+  color: black;
+}
+
+.box2 img{
+  border-radius: 50%;
+  border:2px solid black;
+  width:70px;
+}
+.box2 button{
+  width:50%;
+}
+.player img{
+  border-radius: 50%;
+  border:2px solid black;
+  width:60px;
+}
+#gender{
+  width:10%;
+}
+
+.commentimg img{
+  border-radius: 50%;
+  border:2px solid black;
+  width:60px;
+}
+.player p{
+  font-size: 24px;
+}
+.players{
+  height:300px;
+  overflow:auto;
+}
+.inner1{
+  position: relative;
+  float: left;
+  width:50%;
+}
+.inner2{
+  position: relative;
+}
+textarea{
+  position: relative;
+  width: 90%;
+  resize: none;
+  height: 30%;
+}
+#time{
+  font-size: 23px;
+}
+.friendss{
+  padding-left: 70px;
+}
+.friendimages{
+    display:inline-block;
+}
+.friendnames{
+  display:inline-block;
+  width:45%;
+  padding-left:5%;
+}
+.friendimage{
+    display:inline-block;
+}
+.friendname{
+  display:inline-block;
+  width:35%;
+  padding-left:5%;
+}
+#map {
+  height: 400px;  /* The height is 400 pixels */
+  width: 100%;  /* The width is the width of the web page */
+ }
+#weatherimgd{
+  width:2.5em;
+  height:2.5em;
+  display: inline-block;
+}
+.reply input[type="text"] {
+  width:70%;
+  background: transparent;
+  border:none; /* Get rid of the browser's styling */
+  border-bottom:1px solid grey; /* Add your own border */
+}
+.reply input[type="text"].middle:focus {
+  outline-width: 0;
+}
+.replyp:hover{
+  color: #696969;
+}
+.replyp{
+  margin-left: 25%;
+  height: 40px;
+}
+.reply{
+  margin-bottom: 50px;
+  margin-left: 25%;
+}
+.hr{
+  display:block;
+  width:100% ;
+  border-top: 1px solid #ccc;
+}
+

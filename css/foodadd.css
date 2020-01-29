@@ -1,0 +1,44 @@
+﻿body {
+    
+}
+.time {
+    width: 22%;
+    height: 20%;
+    background-color: transparent;
+    color: black;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #eeeeee 2px;
+    padding: 3px 10px;
+}
+.price {
+    width: 22%;
+    height: 20%;
+    background-color: transparent;
+    color: black;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #eeeeee 2px;
+    padding: 3px 10px;
+}
+#contenttitle{
+    background-color:black;
+    color:green;
+}
+.text-line {
+    background-color: transparent;
+    color: black;
+    outline: none;
+    outline-style: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #eeeeee 2px;
+    padding: 3px 10px;
+}
