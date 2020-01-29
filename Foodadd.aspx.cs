@@ -19,9 +19,11 @@ namespace EADP_Project
         protected void btnconfirm_Click(object sender, EventArgs e)
         {
             var name = TextBoxname.Text;
-            var description = this.Request.Form["content"];
+            var description = "";//this.Request.Form["content"];
+            ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert("+description+"')", true);
+
             var culinarytype = DropDowntype.SelectedValue;
-            var deals = txtdeals.Text;
+            var deals = "";
             var email = TextBoxemail.Text;
             var phone = TextBoxphone.Text;
             var opwkd1 = this.Request.Form["time1"];
@@ -55,6 +57,11 @@ namespace EADP_Project
         }
 
         protected void txtdeals_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void TextBoxname_TextChanged(object sender, EventArgs e)
         {
 
         }

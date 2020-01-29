@@ -6,7 +6,6 @@
     <link href="css/foodlist.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/detail.css">
     <link rel="stylesheet" href="/css/style2.css">
-    <div class="hero-wrap js-fullheight" style="background-image: url('images/e2bedb63dfa13ca56b223841e1c73257.jpg'); max-height: 105px;">
     </div>
     <div id="main-container">
     <div id="carosell-container">
